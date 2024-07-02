@@ -9,14 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/venta/{area}/{piso?}',[ventaController:: class,'calcPrecio' ]);
-#Route::get('/venta/{area}',[ventaController:: class,'getArea' ]);
-/*
-Route::get('/venta/{area}', function(float $area)
 
-{
-    echo "El area del apartamento es:   ".$area;
-});
-*/
 
 Route::get('/renta',function()
 {

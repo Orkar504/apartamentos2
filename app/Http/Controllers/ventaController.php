@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-    
+
 class ventaController extends Controller
 {
     function calcPrecio(float $area, int $piso)
@@ -27,11 +27,5 @@ class ventaController extends Controller
         return view('venta', compact('area','piso','precio'));
     }
 
-    function getArea(float $area)
-    {
-        $precio = 500;
-        $piso = 1;
-
-        return view('venta', compact('area','piso','precio'));
-    }
+    
 }
