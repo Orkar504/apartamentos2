@@ -1,3 +1,18 @@
-<div>
-    <!-- Because you are alive, everything is possible. - Thich Nhat Hanh -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Precio del departamento </h1>
+    <label >Numero de piso {{$piso}}</label>
+    <br>
+    <label >Area del apartamento {{$area}}</label>
+    <br>
+    <label >Precio total del apartamento{{$precio}}</label>
+    
+</body>
+</html>
