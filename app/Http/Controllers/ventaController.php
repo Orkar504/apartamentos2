@@ -17,7 +17,7 @@ class ventaController extends Controller
         {
             $precio = $costXmetro2 * $area ; 
             $controller->returnVentaView($area,$piso,$precio);
-        } else
+        } elseif($piso >0 && $piso <13)
         {
             $precio = $costXmetro2 * $area ;
             for ($i = 1; $i < $piso; $i++)
