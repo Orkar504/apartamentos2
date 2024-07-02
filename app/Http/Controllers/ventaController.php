@@ -16,6 +16,7 @@ class ventaController extends Controller
         if ($piso == null || $piso == 1)
         {
             $precio = $costXmetro2 * $area ; 
+            $controller->returnVentaView($area,$piso,$precio);
         } else
         {
             $precio = $costXmetro2 * $area ;
@@ -23,13 +24,17 @@ class ventaController extends Controller
             {
                 $precio = $precio * $costoExtra;
             }
+            $controller->returnVentaView($area,$piso,$precio);
         }
 
-        return view('venta', compact('area','piso','precio'));
+       
     }
 
-    function returnVentaView()
-    {}
+    private function returnVentaView(float $area,int $piso,float $precio)
+    {
+        return view('venta', compact('area','piso','precio'));
+
+    }
 
     
 }
