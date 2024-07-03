@@ -10,7 +10,7 @@
     <h1>Precio del departamento </h1>
     <label >Numero de piso {{$piso}}</label>
     <br>
-    <label >Area del apartamento {{$area}}</label>
+    <label >Area del apartamento {{$area}}  metros cuadrados</label>
     <br>
     <label >Precio total del apartamento{{$precio}}</label>
     
