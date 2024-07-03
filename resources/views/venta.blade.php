@@ -12,7 +12,7 @@
     <br>
     <label >Area del apartamento {{$area}}  metros cuadrados</label>
     <br>
-    <label >Precio total del apartamento{{$precio}}</label>
+    <label >Precio total del apartamento {{$precio}} Dolares</label>
     
 </body>
 </html>
