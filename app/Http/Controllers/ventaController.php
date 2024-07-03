@@ -8,7 +8,7 @@ class ventaController extends Controller
 {
     function calcPrecio(float $area, int $piso)
     {   
-        $controller = new ventaController();
+      
         $costoExtra = 1.01;
         $costXmetro2 = 1500;
         $precio;
@@ -29,6 +29,15 @@ class ventaController extends Controller
          return view('venta', compact('area','piso','precio'));
       
    
+    }
+    function calcPrecioNoPiso(float $area)
+    {   
+     
+        $costoExtra = 1.01;
+        $costXmetro2 = 1500;
+        $piso = 1;
+        $precio = $costXmetro2 * $area ;
+        return view('venta', compact('area','piso','precio'));
     }
 
 

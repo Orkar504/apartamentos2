@@ -8,7 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/venta/{area}/{piso?}',[ventaController:: class,'calcPrecio' ]);
+Route::get('/venta/{area}/{piso}',[ventaController:: class,'calcPrecio' ]);
+Route::get('/venta/{area}/',[ventaController:: class,'calcPrecioNoPiso' ]);
 
 
 Route::get('/renta',function()
