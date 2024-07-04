@@ -36,4 +36,18 @@ class adminController extends Controller
         $newDuenio->save();
         return redirect('/administracion/duenios');
     }
+
+    public function preguntarDuenioID()
+    {
+        
+        return view ('buscarDuenio');
+    }
+
+    public function buscarDuenio(Request $request)
+    {
+        $duenioID = $request->duenioID;
+        $theDuenio = duenio::where('idDuenio',$duenioID)->get();
+        return view('mostrarDuenio',compact('theDuenio'));
+
+    }
 }

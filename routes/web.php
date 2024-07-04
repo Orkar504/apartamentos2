@@ -23,17 +23,31 @@ Route::get('/administracion',function()
     echo "vista admin";
 });
 
-Route::get ('/administracion/apartamentos',[adminController:: class, 'mostrarPropiedades']);
+Route::get ('/administracion/apartamentos',
+[adminController:: class, 'mostrarPropiedades']);
+
 Route::get ('/administracion/duenios',
 [adminController:: class, 'mostrarDuenios'])
 ->name('duenio.mostrar');
-Route::get ('/administracion/agregar/duenio',[adminController:: class, 'agregarDuenio']);
 
-Route:get ('/administracion/buscar/duenio');
+Route::get ('/administracion/agregar/duenio',
+[adminController:: class, 'agregarDuenio']);
 
+;
 
 Route::post ('/administracion/guardar/duenio',
 [adminController:: class, 'guardarDuenio'])
 ->name('duenio.guardar');
 
+//buscar los duenios
+/*Route::get ('/administracion/buscar/duenio',
+[adminController:: class, 'preguntarDuenioID']);
+*/
+
+Route::get('/administracion/buscar/duenio',
+[adminController:: class, 'preguntarDuenioID']);
+
+Route::post('/administracion/mostrar/duenio',
+[adminController:: class, 'buscarDuenio'])
+->name('duenio.buscar');
 

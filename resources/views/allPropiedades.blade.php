@@ -29,8 +29,6 @@
             <td>{{$propiedade->color}}</td>
             <td>{{$propiedade->idDuenio}}</td> 
            </tr>
-          
-          
           @endforeach
         </tbody>
         
