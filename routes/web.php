@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ventaController;
+use App\Http\Controllers\adminController;
 
 
 Route::get('/', function () {
@@ -21,3 +22,5 @@ Route::get('/administracion',function()
 {
     echo "vista admin";
 });
+
+Route::get ('/administracion/apartamentos',[adminController:: class, 'mostrarPropiedades']);
