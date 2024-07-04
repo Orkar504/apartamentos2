@@ -57,3 +57,12 @@ Route::get('/administracion/buscar/apartamento/duenio',
 Route::post('/administracion/mostrar/apartamento/duenio',
 [adminController:: class, 'buscarDuenioDeApartamento'])
 ->name('duenio.buscar2');
+
+// Editar duenio
+
+Route::get('/administracion/editar/duenio/{id}',
+[adminController:: class, 'editarDuenio']);
+
+Route::get ('/administracion/editar/duenio/salvar/{id}',
+[adminController:: class, 'guardarEdicionDuenio'])
+->name('duenio.editar.guardar');

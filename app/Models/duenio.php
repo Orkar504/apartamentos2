@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class duenio extends Model
 {
     use HasFactory;
-    protected $primarykey = 'idDuenio';
+    protected $primaryKey = 'idDuenio';
 
     public $timestamps = false;
 }

@@ -64,4 +64,41 @@ class adminController extends Controller
         
         return view('mostrarDuenio',compact('theDuenio'));
     }
+    
+    public function editarDuenio ($id)
+    {
+        
+        $getDuenio = duenio::where('idDuenio',$id)->get();
+        $duenioEditar = $getDuenio[0];
+        return view('editarDuenio', compact('duenioEditar'));
+    }
+
+    public function guardarEdicionDuenio(Request $request,$id)
+    {
+        $duenioEDIT = duenio::find($id);
+        $duenioEDIT->nombre = $request->name;
+        $duenioEDIT->apellido = $request->apellido;
+        $duenioEDIT->correo = $request->correo;
+
+        $duenioEDIT->save();
+        return redirect('/administracion/duenios');
+
+        /*
+       $getDuenio = duenio::where('idDuenio',$id)->get();
+   
+      
+        $duenioEditar = $getDuenio[0];
+      
+         
+        $duenioEditar->nombre = $request->name;
+      
+        
+        $duenioEditar->apellido = $request->apellido;
+        $duenioEditar->correo = $request->correo;
+        echo $duenioEditar;
+        $duenioEditar->save();
+       // return redirect('/administracion/duenios');
+        
+        */
+    }
 }
