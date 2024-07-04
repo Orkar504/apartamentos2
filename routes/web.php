@@ -24,3 +24,6 @@ Route::get('/administracion',function()
 });
 
 Route::get ('/administracion/apartamentos',[adminController:: class, 'mostrarPropiedades']);
+Route::get ('/administracion/duenios',[adminController:: class, 'mostrarDuenios']);
+
+
