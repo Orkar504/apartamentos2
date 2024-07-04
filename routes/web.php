@@ -40,9 +40,8 @@ Route::post ('/administracion/guardar/duenio',
 ->name('duenio.guardar');
 
 //buscar los duenios
-/*Route::get ('/administracion/buscar/duenio',
-[adminController:: class, 'preguntarDuenioID']);
-*/
+
+// Por duenio ID
 
 Route::get('/administracion/buscar/duenio',
 [adminController:: class, 'preguntarDuenioID']);
@@ -51,3 +50,10 @@ Route::post('/administracion/mostrar/duenio',
 [adminController:: class, 'buscarDuenio'])
 ->name('duenio.buscar');
 
+// Por apartamento id
+Route::get('/administracion/buscar/apartamento/duenio',
+[adminController:: class, 'preguntarDuenioDeApartamento']);
+
+Route::post('/administracion/mostrar/apartamento/duenio',
+[adminController:: class, 'buscarDuenioDeApartamento'])
+->name('duenio.buscar2');

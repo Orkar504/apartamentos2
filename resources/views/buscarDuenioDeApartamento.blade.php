@@ -7,14 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div class="form-container">
-        <form action="{{ route('duenio.buscar') }}" method="POST">
+        <form action="{{ route('duenio.buscar2') }}" method="POST">
             @csrf
             @method('POST')
             <div class="form-group">
-                <label for="text">duenioID</label>
-                <input type="text" id="duenioID" name="duenioID" required>
+                <label for="text">numero de propiedad</label>
+                <input type="text" id="propiedadID" name="propiedadID" required>
             </div>
        
             <button type="submit">buscar</button>

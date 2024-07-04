@@ -50,4 +50,18 @@ class adminController extends Controller
         return view('mostrarDuenio',compact('theDuenio'));
 
     }
+
+    public function preguntarDuenioDeApartamento()
+    {
+        return view ('buscarDuenioDeApartamento');
+    }
+    public function  buscarDuenioDeApartamento(Request $request)
+    {
+        $apartamentoID = $request->propiedadID;
+        $apartamentoData = propiedade::where('idDuenio',$apartamentoID)->get();
+        $duenioID = $apartamentoData[0]["idDuenio"];
+        $theDuenio = duenio::where('idDuenio',$duenioID)->get();
+        
+        return view('mostrarDuenio',compact('theDuenio'));
+    }
 }
