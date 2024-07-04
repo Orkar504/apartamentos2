@@ -21,4 +21,19 @@ class adminController extends Controller
         $duenios = Duenio::all();
         return view('duenio', compact('duenios'));
     }
+
+    public function agregarDuenio()
+    {
+        return view('addDuenio');
+    }
+
+    public function guardarDuenio(Request $request)
+    {
+        $newDuenio = new duenio();
+        $newDuenio->nombre =$request->name;
+        $newDuenio->apellido =$request->apellido;
+        $newDuenio->correo =$request->correo;
+        $newDuenio->save();
+        return redirect('/administracion/duenios');
+    }
 }
